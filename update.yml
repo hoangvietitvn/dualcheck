@@ -1,0 +1,8 @@
+           - name: CHECK UPDATE PROCESS
+             shell: yum update -y
+             register: update01
+
+           - name: SHOW UPDATE
+             debug:
+                  var: update01.stdout_lines
+

@@ -1,0 +1,9 @@
+           - name: Check Packages Will Update
+             yum: list=updates update_cache=true
+             register: checku01
+
+           - name: SHOW INFO PACKAGES WILL UPDATE
+             debug:
+                var: checku01.results
+
+

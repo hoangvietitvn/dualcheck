@@ -1,0 +1,8 @@
+           - name: Check LOCALE After Update
+             shell: locale
+             register: locale02
+
+           - name: SHOW INFO LOCALE After UPDATE
+             debug:
+                  var: locale02.stdout_lines
+

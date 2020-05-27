@@ -1,0 +1,154 @@
+          - name: Get stat of directory php-fpm.d
+            stat:
+              path: /etc/php-fpm.d/
+            register: check_owner
+          - name: Show infor php-fpm.d
+            debug:
+              msg:
+                  - "Owner: {{ check_owner.stat.pw_name }}"
+                  - "Group: {{ check_owner.stat.gr_name }}"
+                  - "Mode:  {{ check_owner.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of file /etc/php-fpm.d/www.conf
+            stat:
+              path: /etc/php-fpm.d/www.conf
+            register: check_owner0
+          - name: Show infor of file www.conf
+            debug:
+              msg:
+                  - "Owner: {{ check_owner0.stat.pw_name }}"
+                  - "Group: {{ check_owner0.stat.gr_name }}"
+                  - "Mode:  {{ check_owner0.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of file php.ini
+            stat:
+              path: /etc/php.ini
+            register: check_owner1
+          - name: Show infor of file php.ini
+            debug:
+              msg:
+                  - "Owner: {{ check_owner1.stat.pw_name }}"
+                  - "Group: {{ check_owner1.stat.gr_name }}"
+                  - "Mode:  {{ check_owner1.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of /var/log/php-fpm
+            stat:
+              path: /var/log/php-fpm
+            register: check_owner2
+          - name: Show infor /var/log/php-fpm
+            debug:
+              msg:
+                  - "Owner: {{ check_owner2.stat.pw_name }}"
+                  - "Group: {{ check_owner2.stat.gr_name }}"
+                  - "Mode:  {{ check_owner2.stat.mode }}" 
+            ignore_errors: yes
+          - name: Get stat of directory /var/www
+            stat:
+              path: /var/www
+            register: check_owner3
+          - name: Show infor of /var/www
+            debug:
+              msg:
+                  - "Owner: {{ check_owner3.stat.pw_name }}"
+                  - "Group: {{ check_owner3.stat.gr_name }}"
+                  - "Mode:  {{ check_owner3.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /var/www/html
+            stat:
+              path: /var/www/html
+            register: check_owner4
+          - name: Show infor of directory /var/www/html
+            debug:
+              msg:
+                  - "Owner: {{ check_owner4.stat.pw_name }}"
+                  - "Group: {{ check_owner4.stat.gr_name }}"
+                  - "Mode:  {{ check_owner4.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /etc/httpd/conf
+            stat:
+              path: /etc/httpd/conf
+            register: check_owner5
+          - name: Show infor of /etc/httpd/conf
+            debug:
+              msg:
+                  - "Owner: {{ check_owner5.stat.pw_name }}"
+                  - "Group: {{ check_owner5.stat.gr_name }}"
+                  - "Mode:  {{ check_owner5.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of file /etc/httpd/conf/httpd.conf
+            stat:
+              path: /etc/httpd/conf/httpd.conf
+            register: check_owner6
+          - name: Show infor of file /etc/httpd/conf/httpd.conf
+            debug:
+              msg:
+                  - "Owner: {{ check_owner6.stat.pw_name }}"
+                  - "Group: {{ check_owner6.stat.gr_name }}"
+                  - "Mode:  {{ check_owner6.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /var/log/nginx
+            stat:
+              path: /var/log/nginx
+            register: check_owner7
+          - name: Show infor of /var/log/nginx
+            debug:
+              msg:
+                  - "Owner: {{ check_owner7.stat.pw_name }}"
+                  - "Group: {{ check_owner7.stat.gr_name }}"
+                  - "Mode:  {{ check_owner7.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of file /etc/nginx/nginx.conf
+            stat:
+              path: /etc/nginx/nginx.conf
+            register: check_owner8
+          - name: Show infor of file /etc/nginx/nginx.conf
+            debug:
+              msg:
+                  - "Owner: {{ check_owner8.stat.pw_name }}"
+                  - "Group: {{ check_owner8.stat.gr_name }}"
+                  - "Mode:  {{ check_owner8.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /usr/share/nginx/html
+            stat:
+              path: /usr/share/nginx/html
+            register: check_owner9
+          - name: Show infor of /usr/share/nginx/html
+            debug:
+              msg:
+                  - "Owner: {{ check_owner9.stat.pw_name }}"
+                  - "Group: {{ check_owner9.stat.gr_name }}"
+                  - "Mode:  {{ check_owner9.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /var/lib
+            stat:
+              path: /var/lib
+            register: check_owner10
+          - name: Show infor of /var/lib
+            debug:
+              msg:
+                  - "Owner: {{ check_owner10.stat.pw_name }}"
+                  - "Group: {{ check_owner10.stat.gr_name }}"
+                  - "Mode:  {{ check_owner10.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /var/lib64
+            stat:
+              path: /var/lib64
+            register: check_owner11
+          - name: Show infor of /var/lib64
+            debug:
+              msg:
+                  - "Owner: {{ check_owner11.stat.pw_name }}"
+                  - "Group: {{ check_owner11.stat.gr_name }}"
+                  - "Mode:  {{ check_owner11.stat.mode }}"
+            ignore_errors: yes
+          - name: Get stat of directory /var/lib/mysql
+            stat:
+              path: /var/lib/mysql
+            register: check_owner12
+          - name: Show infor of directory /var/lib/mysql
+            debug:
+              msg:
+                  - "Owner: {{ check_owner12.stat.pw_name }}"
+                  - "Group: {{ check_owner12.stat.gr_name }}"
+                  - "Mode:  {{ check_owner12.stat.mode }}"
+            ignore_errors: yes

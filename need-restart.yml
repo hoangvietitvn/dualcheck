@@ -1,0 +1,8 @@
+           - name: Check Packages Needs-Restarting
+             shell: needs-restarting
+             register: need01
+
+           - name: SHOW INFO PACKAGES NEED-RESTARTING
+             debug:
+                  var: need01.stdout_lines
+

@@ -1,0 +1,8 @@
+           - name: Check Service Status
+             shell: systemctl | grep running
+             register: service02
+
+           - name: SHOW SERVICE STATUS
+             debug:
+                  var: service02.stdout_lines
+

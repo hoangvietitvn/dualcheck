@@ -1,0 +1,7 @@
+           - name: Check Process After Update 
+             shell: ps -eo command --sort comm |grep -v COMMAND
+             register: proc02
+
+           - name: SHOW INFO PROCESS AFTER UPDATE
+             debug:
+                  var: proc02.stdout_lines

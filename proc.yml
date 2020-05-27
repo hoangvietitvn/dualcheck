@@ -1,0 +1,7 @@
+           - name: Check Process Before Update 
+             shell: ps -eo command --sort comm |grep -v COMMAND
+             register: proc01
+
+           - name: SHOW INFO PROCESS BEFORE UPDATE
+             debug:
+                  var: proc01.stdout_lines

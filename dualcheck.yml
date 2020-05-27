@@ -1,0 +1,32 @@
+---
+- name: Check Update Playbook
+  hosts: webapp
+  remote_user: sysadmin
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+          - name: Check File and Directory chown and permission
+            include: permission.yml
+          - name: Check LOCALE  Before Update
+            include: locale.yml                 
+          - name: Check Process Before Update
+            include: proc.yml                 
+          - name: Check Service Before Update
+            include: service.yml              
+          - name: Check Update Packages
+            include: check-update.yml         
+          - name: Update
+            include: update.yml               
+          - name: Check LOCALE After Update
+            include: locale2.yml              
+          - name: Check Process After Update
+            include: proc2.yml                
+          - name: Check Process After Update  
+            include: service2.yml             
+          - name: Check Needs-restarting
+            include: need-restart.yml         
+         # - name: REBOOT
+         #   include: reboot.yml               
+         # - name: Check Need-restarting After REBOOT
+         #   include: need-restart2.yml        
