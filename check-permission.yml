@@ -1,0 +1,149 @@
+           ################ CHECK PHP DIR AND FILE PERMISSION #############
+           - name: Check Permission Of Directory /etc/php-fpm.d/
+             shell: ls -al /etc/ | grep php-fpm.d
+             register: chck01
+             ignore_errors: yes  
+           - name: SHOW PERMISSION /etc/php-fpm.d
+             debug:
+                     var: chck01.stdout_lines
+           - name: SHOW Permission of File /etc/php.ini
+             shell: ls -alhr /etc | grep php.ini
+             register: chck02
+             ignore_errors: yes
+           - name: SHOW PERMISSION /etc/php.ini
+             debug:
+                     var: chck02.stdout_lines
+           - name: Check Permission of File /etc/php-fpm.d/www.sock
+             shell: ls -alhr /etc/php-fpm.d | grep www.sock
+             register: chck03
+             ignore_errors: yes
+           - name: SHOW PERMISSION /etc/php-fpm.d/www.sock
+             debug:
+                     var: chck03.stdout_lines
+           - name: Check Permission of Directory  /var/log/php-fpm
+             shell: ls -alhr /var/log | grep php-fpm
+             register: chck04
+             ignore_errors: yes
+           - name: SHOW PERMISSION /var/log/php-fpm
+             debug:
+                     var: chck04.stdout_lines
+           - name: Check Permission of File  /run/php-fpm/www.sock
+             shell: ls -alhr /run/php-fpm | grep www.sock 
+             register: chck05
+             ignore_errors: yes
+           - name: SHOW PERMISSION /run/php-fpm/www.sock
+             debug:
+                     var: chck05.stdout_lines
+           ############# CHECK HTTPD DIR AND FILES PERMISSION ##############
+           - name: Check Permission of Directory /etc/httpd/conf and conf.d
+             shell: ls -alhr /etc/httpd/ | grep conf
+             register: chck06
+             ignore_errors: yes
+           - name: SHOW PERMISSION /etc/httpd/conf and conf.d
+             debug:
+                     var: chck06.stdout_lines
+           - name: Check Permission of File /etc/httpd/conf/httpd.conf
+             shell: ls -alhr /etc/httpd/conf | grep httpd.conf
+             register: chck07
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILE /etc/httpd/conf/httpd.conf
+             debug:
+                     var: chck07.stdout_lines
+           - name: Check Permission of All File and Directory In /etc/httpd/conf.d
+             shell: ls -alhr /etc/httpd/conf
+             register: chck08
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILES AND DIRECTORY IN /etc/httpd/conf.d
+             debug:
+                     var: chck08.stdout_lines
+           - name: Check Permission of Directory /var/log/httpd
+             shell: ls -alhr /var/log/ | grep httpd
+             register: chck09
+             ignore_errors: yes
+           - name: SHOW PERMISSION /var/log/httpd
+             debug:
+                     var: chck09.stdout_lines
+           - name: Check Permission of Directory /var/www
+             shell: ls -alhr /var | grep www
+             register: chck10
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF DIRECTORY /var/www
+             debug:
+                     var: chck10.stdout_lines
+           - name: Check Permission of Directory /var/www/html
+             shell: ls -alhr /var/www | grep html 
+             register: chck11
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF DIRECTORY /var/www/html 
+             debug:
+                     var: chck11.stdout_lines
+           - name: Check Permission of Files and Directory In /var/www/html
+             shell: ls -alhr /var/www/html  
+             register: chck12
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILES AND DIRECTORY /var/www/html 
+             debug:
+                     var: chck12.stdout_lines
+           ##################### CHECK NGINX DIR AND FILES PERMISSION ##################
+           - name: Check Permission Of Directory /etc/nginx/conf.d/ 
+             shell: ls -alhr /etc/nginx | grep conf.d 
+             register: chck13
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF DIRECTORY /etc/nginx/conf.d/             
+             debug: 
+                     var: chck13.stdout_lines
+           - name: Check Permission of File /etc/nginx/nginx.conf 
+             shell: ls -alhr /etc/nginx | grep nginx.conf
+             register: chck14
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILE /etc/nginx/nginx.conf
+             debug:
+                     var: chck14.stdout_lines
+           - name: Check Permission of Directory /usr/share/nginx/html 
+             shell: ls -alhr /usr/share/nginx | grep html 
+             register: chck15
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF DIRECTORY /usr/share/nginx/html
+             debug:
+                     var: chck15.stdout_lines
+           - name: Check Permission of Files and Directory /usr/share/nginx/html 
+             shell: ls -alhr /usr/share/nginx/html
+             register: chck16
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILES AND DIRECTORY /usr/share/nginx/html 
+             debug:  
+                     var: chck16.stdout_lines
+           - name: Check Permission of Directory /var/log/nginx
+             shell: ls -alhr /var/log/ | grep nginx
+             register: chck17
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF DIRECTORY /var/log/nginx 
+             debug:  
+                     var: chck17.stdout_lines 
+           ############## CHECK AUDIT LOG DIRECTORY  #################                     
+           - name: Check Permission of Directory /var/log/audit
+             shell: ls -alhr /var/log/ | grep audit 
+             register: chck18
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF DIRECTORY /var/log/audit 
+             debug:  
+                     var: chck18.stdout_lines
+           - name: Check Permission of Files /var/log/audit/audit.log
+             shell: ls -alhr /var/log/audit | grep audit.log 
+             register: chck19
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILES /var/log/audit/audit.log 
+             debug:  
+                     var: chck19.stdout_lines
+           ############## CHECK LIB DIRECTORY ########################
+           - name: Check Permission of Directory in /var/lib
+             shell: ls -alhr /var | grep lib 
+             register: chck20
+             ignore_errors: yes
+           - name: SHOW PERMISSION OF FILES /var/lib
+             debug:  
+                     var: chck20.stdout_lines
+           
+                                
+           
+     
