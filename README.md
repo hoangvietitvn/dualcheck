@@ -1,0 +1,2 @@
+INSTALL ANSIBLE
+RUN FILE dualcheck.yml
