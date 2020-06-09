@@ -1,2 +1,2 @@
-INSTALL ANSIBLE
-RUN FILE dualcheck.yml
+git clone git@github.com:hoangvietitvn/dualcheck.git
+ansible-playbook dualcheck.yml 
