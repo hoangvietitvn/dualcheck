@@ -22,7 +22,7 @@
             include: locale2.yml              
           - name: Check Process After Update
             include: proc2.yml                
-          - name: Check Process After Update  
+          - name: Check Service After Update  
             include: service2.yml             
           - name: Check Needs-restarting
             include: need-restart.yml         
