@@ -26,7 +26,7 @@
             include: service2.yml             
           - name: Check Needs-restarting
             include: need-restart.yml         
-         # - name: REBOOT
-         #   include: reboot.yml               
+          - name: REBOOT
+            include: reboot.yml               
          # - name: Check Need-restarting After REBOOT
          #   include: need-restart2.yml        
